@@ -1,0 +1,12 @@
+{
+  "name": "logos-kit",
+  "version": "1.0.0",
+  "description": "Shared components and styles for Logos Web Studio demo sites",
+  "exports": {
+    "./ScrollReveal": "./ScrollReveal.tsx",
+    "./animations.css": "./animations.css"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  }
+}

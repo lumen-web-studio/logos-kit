@@ -1,0 +1,43 @@
+/* ── Logos Kit — Scroll & Hero animations ─────────────────────────── */
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Scroll reveal */
+.reveal-item {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.reveal-group.is-visible .reveal-item                          { animation: fade-in-up 0.6s ease forwards; animation-delay:    0ms; }
+.reveal-group.is-visible [data-reveal-delay="1"].reveal-item   { animation: fade-in-up 0.6s ease forwards; animation-delay:  120ms; }
+.reveal-group.is-visible [data-reveal-delay="2"].reveal-item   { animation: fade-in-up 0.6s ease forwards; animation-delay:  240ms; }
+.reveal-group.is-visible [data-reveal-delay="3"].reveal-item   { animation: fade-in-up 0.6s ease forwards; animation-delay:  360ms; }
+.reveal-group.is-visible [data-reveal-delay="4"].reveal-item   { animation: fade-in-up 0.6s ease forwards; animation-delay:  480ms; }
+.reveal-group.is-visible [data-reveal-delay="5"].reveal-item   { animation: fade-in-up 0.6s ease forwards; animation-delay:  600ms; }
+.reveal-group.is-visible [data-reveal-delay="6"].reveal-item   { animation: fade-in-up 0.6s ease forwards; animation-delay:  720ms; }
+.reveal-group.is-visible [data-reveal-delay="7"].reveal-item   { animation: fade-in-up 0.6s ease forwards; animation-delay:  840ms; }
+.reveal-group.is-visible [data-reveal-delay="8"].reveal-item   { animation: fade-in-up 0.6s ease forwards; animation-delay:  960ms; }
+.reveal-group.is-visible [data-reveal-delay="9"].reveal-item   { animation: fade-in-up 0.6s ease forwards; animation-delay: 1080ms; }
+.reveal-group.is-visible [data-reveal-delay="10"].reveal-item  { animation: fade-in-up 0.6s ease forwards; animation-delay: 1200ms; }
+
+/* Hero reveal */
+.hero-item {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.hero-active .hero-item                        { animation: fade-in-up 0.7s ease forwards; animation-delay:   0ms; }
+.hero-active [data-hero-delay="1"].hero-item   { animation: fade-in-up 0.7s ease forwards; animation-delay: 150ms; }
+.hero-active [data-hero-delay="2"].hero-item   { animation: fade-in-up 0.7s ease forwards; animation-delay: 300ms; }
+.hero-active [data-hero-delay="3"].hero-item   { animation: fade-in-up 0.7s ease forwards; animation-delay: 450ms; }
+.hero-active [data-hero-delay="4"].hero-item   { animation: fade-in-up 0.7s ease forwards; animation-delay: 600ms; }
+.hero-active [data-hero-delay="5"].hero-item   { animation: fade-in-up 0.7s ease forwards; animation-delay: 750ms; }
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .hero-item,
+  .reveal-item { opacity: 1; transform: none; animation: none; }
+}
