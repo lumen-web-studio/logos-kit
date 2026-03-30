@@ -4,9 +4,11 @@
   "description": "Shared components and styles for Logos Web Studio demo sites",
   "exports": {
     "./ScrollReveal": "./ScrollReveal.tsx",
-    "./animations.css": "./animations.css"
+    "./animations.css": "./animations.css",
+    "./GoogleAnalytics": "./GoogleAnalytics.tsx"
   },
   "peerDependencies": {
-    "react": ">=18"
+    "react": ">=18",
+    "next": ">=14"
   }
 }
