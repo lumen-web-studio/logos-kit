@@ -5,7 +5,8 @@
   "exports": {
     "./ScrollReveal": "./ScrollReveal.tsx",
     "./animations.css": "./animations.css",
-    "./GoogleAnalytics": "./GoogleAnalytics.tsx"
+    "./GoogleAnalytics": "./GoogleAnalytics.tsx",
+    "./analytics": "./analytics.ts"
   },
   "peerDependencies": {
     "react": ">=18",
