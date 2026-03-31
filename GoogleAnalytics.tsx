@@ -16,9 +16,9 @@ export default function GoogleAnalytics({
     <>
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}
-        strategy="worker"
+        strategy="lazyOnload"
       />
-      <Script id="ga-init" strategy="worker">
+      <Script id="ga-init" strategy="lazyOnload">
         {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${measurementId}');`}
       </Script>
     </>
