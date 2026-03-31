@@ -2,6 +2,7 @@
 
 import Script from "next/script";
 import type { ReactElement } from "react";
+import ClickTracker from "./ClickTracker";
 
 type Props = {
   measurementId: string | undefined;
@@ -21,6 +22,7 @@ export default function GoogleAnalytics({
       <Script id="ga-init" strategy="lazyOnload">
         {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${measurementId}');`}
       </Script>
+      <ClickTracker />
     </>
   );
 }
