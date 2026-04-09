@@ -12,14 +12,16 @@
     "animations.css",
     "GoogleAnalytics.tsx",
     "analytics.ts",
-    "ClickTracker.tsx"
+    "ClickTracker.tsx",
+    "json-ld.ts"
   ],
   "exports": {
     "./ScrollReveal": "./ScrollReveal.tsx",
     "./animations.css": "./animations.css",
     "./GoogleAnalytics": "./GoogleAnalytics.tsx",
     "./analytics": "./analytics.ts",
-    "./ClickTracker": "./ClickTracker.tsx"
+    "./ClickTracker": "./ClickTracker.tsx",
+    "./json-ld": "./json-ld.ts"
   },
   "peerDependencies": {
     "react": ">=18",
