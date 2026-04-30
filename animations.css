@@ -36,8 +36,24 @@
 .hero-active [data-hero-delay="4"].hero-item   { animation: fade-in-up 0.7s ease forwards; animation-delay: 600ms; }
 .hero-active [data-hero-delay="5"].hero-item   { animation: fade-in-up 0.7s ease forwards; animation-delay: 750ms; }
 
+/* Infinite marquee carousel */
+@keyframes carousel-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.carousel-track {
+  animation: carousel-scroll 40s linear infinite;
+}
+
+.carousel-wrap:hover .carousel-track {
+  animation-play-state: paused;
+}
+
 /* Accessibility */
 @media (prefers-reduced-motion: reduce) {
   .hero-item,
   .reveal-item { opacity: 1; transform: none; animation: none; }
+
+  .carousel-track { animation: none; }
 }
