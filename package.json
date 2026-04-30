@@ -1,6 +1,6 @@
 {
   "name": "logos-kit",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Shared components and styles for Logos Web Studio sites",
   "license": "MIT",
   "repository": {
@@ -13,6 +13,7 @@
     "GoogleAnalytics.tsx",
     "analytics.ts",
     "ClickTracker.tsx",
+    "BodyScrollClass.tsx",
     "json-ld.ts"
   ],
   "exports": {
@@ -21,6 +22,7 @@
     "./GoogleAnalytics": "./GoogleAnalytics.tsx",
     "./analytics": "./analytics.ts",
     "./ClickTracker": "./ClickTracker.tsx",
+    "./BodyScrollClass": "./BodyScrollClass.tsx",
     "./json-ld": "./json-ld.ts"
   },
   "peerDependencies": {

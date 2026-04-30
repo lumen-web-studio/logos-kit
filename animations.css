@@ -50,10 +50,96 @@
   animation-play-state: paused;
 }
 
+/* WhatsApp FAB — hidden until body.scroll */
+.whatsapp-fab {
+  opacity: 0;
+  transform: translateY(0.75rem);
+  pointer-events: none;
+  transition:
+    opacity 250ms ease-out,
+    transform 250ms ease-out;
+}
+
+body.scroll .whatsapp-fab {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* WhatsApp button attention pulse (runs 3× then stops) */
+@keyframes wa-pulse {
+  0%   { opacity: 0.45; transform: scale(1); }
+  100% { opacity: 0;    transform: scale(1.7); }
+}
+
+.wa-ping {
+  animation: wa-pulse 1.4s ease-out 3;
+}
+
+/* Mobile nav slide-down */
+@keyframes menu-slide-down {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.menu-enter {
+  animation: menu-slide-down 0.18s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+/* Success circle pop (spring scale) */
+@keyframes circle-pop {
+  0%   { transform: scale(0);    opacity: 0; }
+  55%  { transform: scale(1.18); opacity: 1; }
+  75%  { transform: scale(0.94); }
+  90%  { transform: scale(1.04); }
+  100% { transform: scale(1);    opacity: 1; }
+}
+
+.circle-pop {
+  animation: circle-pop 0.5s 0.1s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+/* Checkmark draw animation (left-to-right: path M4 12l5 5L20 6) */
+@keyframes check-draw {
+  from { stroke-dashoffset: 28; }
+  to   { stroke-dashoffset: 0; }
+}
+
+.check-animated {
+  stroke-dasharray: 28;
+  stroke-dashoffset: 28;
+  animation: check-draw 0.45s 0.45s ease-out forwards;
+}
+
+/* Success card appear */
+@keyframes success-appear {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.success-appear {
+  animation: success-appear 0.35s ease-out both;
+}
+
 /* Accessibility */
 @media (prefers-reduced-motion: reduce) {
   .hero-item,
   .reveal-item { opacity: 1; transform: none; animation: none; }
 
   .carousel-track { animation: none; }
+
+  .menu-enter,
+  .wa-ping,
+  .check-animated,
+  .circle-pop,
+  .success-appear {
+    animation: none;
+    stroke-dashoffset: 0;
+    opacity: 1;
+    transform: none;
+  }
+
+  .whatsapp-fab {
+    transition: none;
+  }
 }
